@@ -1,0 +1,64 @@
+.about {
+    padding-top: 120px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 670px;
+        grid-template-rows: minmax(245, auto) minmax(255, auto);
+        gap: 40px 70px;
+    }
+    &__photo {
+        grid-row: 1/3;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__descr {
+        padding-top: 6px;
+    }
+
+    &__title {
+        position: relative;
+        padding-left: 10px;
+        @include before_circle;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+    }
+    .divider {
+        margin: 10px 0 0 0;
+    }
+    &__text {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+    }
+    &__skills {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        gap: 20px 50px;
+        &_item {
+            display: grid;
+            grid-template-columns: 40px 250px;
+            column-gap: 20px;
+            &-circle {
+                padding: 15px 0 0 15px;
+                position: relative;
+                @include before_circle;
+                &:before {
+                    top: 0;
+                }
+            }
+            &-descr {
+                margin-top: 6px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+    }
+}

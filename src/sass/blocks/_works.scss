@@ -1,0 +1,50 @@
+.works {
+    padding-top: 120px;
+    &__title {
+        text-align: center;
+        position: relative;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform: translateX(-120%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__block {
+        padding: 0 2px 0 2px;
+        margin-top: 60px;
+        display: grid;
+        grid-template: repeat(2, 280px) / repeat(4, 280px);
+        grid-auto-rows: 280px;
+        gap: 5px;
+        grid-template-areas:
+        'uber pulse bread plans'
+        'ipad mac mac plans';
+    }
+    &__link {
+        :hover {
+            transition: all 0.6s;
+            filter: opacity(70%);
+        }
+        :nth-child(1) {
+            grid-area: uber;
+        }
+        :nth-child(2) {
+            grid-area: pulse;
+        }
+        :nth-child(3) {
+            grid-area: bread;
+        }
+        :nth-child(4) {
+            grid-area: plans;
+        }
+        :nth-child(5) {
+            grid-area: ipad;
+        }
+        :nth-child(6) {
+            grid-area: mac;
+        }
+    }
+}

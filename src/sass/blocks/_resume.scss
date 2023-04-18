@@ -1,0 +1,107 @@
+.resume {
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform: translateX(-150%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__items {
+        padding: 0 65px;
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+    &__item {
+        &-title {
+            padding-left: 50px;
+            position: relative;
+            @include before_circle-small;
+            &:before {
+                z-index: 5;
+                left: 0;
+                top: 25%;
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    background-color: #000;
+                    top: -16px;
+                    left: 7px;
+
+                }
+            }
+        }
+        &-body {
+            padding-top: 45px;
+            padding-left: 50px;
+            
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 42px;
+            //     height: 1px;
+            //     background-color: #000;
+            //     top: 72px;
+            //     left: 8px;
+            // }
+        }
+        &-head {
+            position: relative;
+            display: grid;
+            grid-template-columns: 35px 340px;
+            align-items: center;
+            column-gap: 20px;
+            h4 {
+                margin-bottom: 0;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 1px;
+                background-color: #000;
+                top: 28px;
+                left: -42px;
+            }
+        }
+        &-icon {
+            width: 35px;
+            height: 35px;
+            position: relative;
+            padding-left: 18px;
+            padding-top: 25px;  
+            @include before_circle;
+            &:before {
+                top: 30%;
+            }
+        }
+        &-descr {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            grid-column-start: 2;
+        }
+        &-text {
+            margin-top: 15px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+}
