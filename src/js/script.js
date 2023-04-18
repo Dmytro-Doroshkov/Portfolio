@@ -23,9 +23,7 @@ const ratingScores = document.querySelectorAll('.skills__rating-score'),
 
 
 ratingScores.forEach((item, i) => {
-    console.log(item);
     ratingLines[i].style = `width: ${item.textContent}`;
     // ratingLines[i].style.width = item.innerHTML;
-    console.log(item.textContent)
 });
 
